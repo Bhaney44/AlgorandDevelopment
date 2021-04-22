@@ -27,4 +27,5 @@ Derek Leung, Vault: Fast Bootstrapping for the Algorand Cryptocurrency, MIT CSAI
 
 # License
 Copyright Brian Haney 2021
+
 MIT License
