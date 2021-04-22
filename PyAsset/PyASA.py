@@ -1,3 +1,5 @@
+#Credit @ryanRFox
+
 import json
 from algosdk import account, algod, mnemonic, transaction
 
