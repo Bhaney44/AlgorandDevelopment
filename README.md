@@ -1,6 +1,8 @@
 # AlgorandDevelopment
 This repository contains code for developments on the Algorand blockchain.
 
+@Algorand https://github.com/algorand/
+
 # Background on Algorand
 
 Algorand is a proof-of-stake blockchain, which evolved to improve security and power
