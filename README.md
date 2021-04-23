@@ -1,5 +1,5 @@
 # AlgorandDevelopment
-This repository contains code for developments on the Algorand blockchain. It is a work in progress and meant for learning and storage purposes.
+This repository contains code for developments on the Algorand blockchain. It is a work in progress and meant for learning and storage purposes. All code is open under the MIT License, as described in the License file.
 
 @Algorand https://github.com/algorand/
 
