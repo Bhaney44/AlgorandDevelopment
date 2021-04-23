@@ -1,5 +1,5 @@
 # AlgorandDevelopment
-This repository contains code for developments on the Algorand blockchain.
+This repository contains code for developments on the Algorand blockchain. It is a work in progress and meant for learning and storage purposes.
 
 @Algorand https://github.com/algorand/
 
