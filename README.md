@@ -10,6 +10,7 @@ efficiency across blockchain networks by limiting miners to validating transacti
 ownership share. 
 
 Algorand Website: https://www.algorand.com/
+
 Algorand Research: https://www.algorand.com/technology/research-innovation/research-papers
 
 # References
