@@ -1,5 +1,7 @@
+// main package
 package main
 
+// import
 import (
 	"fmt"
 	"io/ioutil"
@@ -11,6 +13,7 @@ import (
 const algodAddress = "http://localhost:8080"
 const algodToken = "f1dee49e36a82face92fdb21cd3d340a1b369925cd12f3ee7371378f1665b9b1"
 
+// main
 func main() {
 
 	rawTx, err := ioutil.ReadFile("./signed.tx")

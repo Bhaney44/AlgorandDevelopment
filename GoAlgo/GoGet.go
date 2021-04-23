@@ -1,5 +1,7 @@
+// package main
 package main
 
+// import
 import (
 	"fmt"
 
@@ -7,11 +9,13 @@ import (
 	"github.com/algorand/go-algorand-sdk/client/kmd"
 )
 
+// const
 const algodAddress = "http://localhost:8080"
 const kmdAddress = "http://localhost:7833"
 const algodToken = "contents-of-algod.token"
 const kmdToken = "contents-of-kmd.token"
 
+// main
 func main() {
 	// Create an algod client
 	algodClient, err := algod.MakeClient(algodAddress, algodToken)

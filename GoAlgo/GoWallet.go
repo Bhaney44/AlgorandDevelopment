@@ -1,5 +1,7 @@
+// Go Wallet
 package main
 
+// import
 import (
 	"fmt"
 
@@ -7,12 +9,12 @@ import (
 	"github.com/algorand/go-algorand-sdk/types"
 )
 
-// These constants represent the kmdd REST endpoint and the corresponding API
-// token. You can retrieve these from the `kmd.net` and `kmd.token` files in
-// the kmd data directory.
+// These constants represent the kmdd REST endpoint and the corresponding API token. 
+// You can retrieve these from the `kmd.net` and `kmd.token` files in the kmd data directory.
 const kmdAddress = "http://localhost:7833"
 const kmdToken = "42b7482737a77d9e5dffb8493ac8899db5f95cbc744d4fcffc0f1c47a6db0c1e"
 
+// Main
 func main() {
 	// Create a kmd client
 	kmdClient, err := kmd.MakeClient(kmdAddress, kmdToken)

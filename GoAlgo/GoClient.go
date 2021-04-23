@@ -1,7 +1,8 @@
-//algo client
-
+// algo client
+// main package
 package main
 
+// import json
 import (
 	"encoding/json"
 	"fmt"
@@ -9,12 +10,13 @@ import (
 	"github.com/algorand/go-algorand-sdk/client/algod"
 )
 
-// These constants represent the algod REST endpoint and the corresponding
-// API token. You can retrieve these from the `algod.net` and `algod.token`
+// These constants represent the algod REST endpoint and the corresponding API token. 
+// You can retrieve these from the `algod.net` and `algod.token`
 // files in the algod data directory.
 const algodAddress = "http://localhost:8080"
 const algodToken = "e48a9bbe064a08f19cde9f0f1b589c1188b24e5059bc661b31bd20b4c8fa4ce7"
 
+// Main
 func main() {
 	// Create an algod client
 	algodClient, err := algod.MakeClient(algodAddress, algodToken)
@@ -30,6 +32,7 @@ func main() {
 		return
 	}
 
+	// print functions
 	fmt.Printf("algod last round: %d\n", nodeStatus.LastRound)
 	fmt.Printf("algod time since last round: %d\n", nodeStatus.TimeSinceLastRound)
 	fmt.Printf("algod catchup: %d\n", nodeStatus.CatchupTime)
@@ -48,5 +51,6 @@ func main() {
 	if err != nil {
 		fmt.Printf("Can not marshall block data: %s\n", err)
 	}
+	// print
 	fmt.Printf("%s\n", blockJSON)
 }

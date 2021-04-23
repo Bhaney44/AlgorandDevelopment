@@ -1,7 +1,9 @@
+// Go Go 
+// Algo Rangers
 // Sign
-
 package main
 
+// import
 import (
 	"fmt"
 
@@ -16,6 +18,7 @@ const kmdToken = "42b7482737a77d9e5dffb8493ac8899db5f95cbc744d4fcffc0f1c47a6db0c
 const algodAddress = "http://localhost:8080"
 const algodToken = "6218386c0d964e371f34bbff4adf543dab14a7d9720c11c6f11970774d4575de"
 
+// main
 func main() {
 	// Create a kmd client
 	kmdClient, err := kmd.MakeClient(kmdAddress, kmdToken)
@@ -51,6 +54,7 @@ func main() {
 			break
 		}
 	}
+
 	// Get a wallet handle
 	initResponse, err := kmdClient.InitWalletHandle(exampleWalletID, "testpassword")
 	if err != nil {
@@ -67,6 +71,8 @@ func main() {
 		fmt.Printf("Error generating key: %s\n", err)
 		return
 	}
+
+	// print
 	fmt.Printf("Generated address 1 %s\n", gen1Response.Address)
 	fromAddr := gen1Response.Address
 
@@ -76,6 +82,8 @@ func main() {
 		fmt.Printf("Error generating key: %s\n", err)
 		return
 	}
+
+	// print 
 	fmt.Printf("Generated address 2 %s\n", gen2Response.Address)
 	toAddr := gen2Response.Address
 
@@ -100,6 +108,7 @@ func main() {
 		return
 	}
 
+	// print
 	fmt.Printf("kmd made signed transaction with bytes: %x\n", signResponse.SignedTransaction)
 
 	// Broadcast the transaction to the network
