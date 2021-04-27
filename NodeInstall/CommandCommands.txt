@@ -58,3 +58,6 @@
 // command = whatis
 // whatis command
 
+// 15. Find Path
+// command = echo $Path
+// shows current directory path
