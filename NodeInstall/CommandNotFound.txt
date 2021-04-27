@@ -1,0 +1,19 @@
+// Command not found
+
+// Several possible causes
+
+// Six common reasons
+// 1. the command syntax was entered incorrectly
+// 2. the command you are attempting to run is not installed
+// 3. the command was deleted, or the system directly was depricated
+// 4. the users $PATH is incomplete
+// 5. the users $PATH is erroneously set
+// 6. the command intended for use is in another location
+
+// Solutions
+// 1. Check PATH
+// echo $PATH
+
+// 2. Set standard path
+// export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+

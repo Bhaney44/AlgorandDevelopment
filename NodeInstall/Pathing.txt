@@ -1,0 +1,14 @@
+//// Pathing for MacOS
+
+//// add directory
+// export PATH=$PATH:~/opt/bin
+
+//// check path
+// echo path
+
+//// Add multiple paths to path
+// export PATH=$PATH:~/opt/bin:~/dev/bin
+
+//// Setting PATH in shell profile
+// export PATH=$PATH:~/opt/bin:~/dev/bin
+
