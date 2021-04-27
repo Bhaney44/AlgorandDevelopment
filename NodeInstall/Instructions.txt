@@ -1,0 +1,12 @@
+// Steps to install node
+
+// export ALGORAND_DATA=~/node/data
+// export ALGORAND_DATA=/var/lib/algorand
+
+//mkdir ~/node
+//cd ~/node
+//curl https://raw.githubusercontent.com/algorand/go-algorand-doc/master/downloads/installers/update.sh -O
+//chmod 544 update.sh
+//./update.sh -i -c stable -p ~/node -d ~/node/data -n
+
+// Install complete - restart node manually
