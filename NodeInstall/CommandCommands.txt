@@ -1,0 +1,60 @@
+// CommandCommands
+// This file is intended to serve as command line documentation.
+// The file is focused on MacOS, terminal prompt.
+//Copyright Brian Haney 2021
+
+//1. Change Directory
+// command = cd
+// changes the directory
+// path/to/directory
+
+//2. Listing Directory
+// command = ls
+// lists directory contents
+
+//3. Open files
+// command = open
+// open node
+
+// 4. Open file as a txt file
+// command = -e
+// open file -e
+
+// 5. Copy a file
+// command = cp
+// cp filezeo fileone
+
+// 6. Move a file
+// command = mv
+// mv filezeo path/zero/go
+
+// 7. Create a directory
+// command = mkdir
+// mkdir node/data/newdirectory
+
+// 8. Remove empty directory
+// command = rmdir
+// rmdir path/to/directory
+
+// 9. remove nested directory
+// command = rm -R
+// rm -R path/to/directory
+
+// 10. Administrator priviledges
+// command = sudo
+// sudo command
+
+// 11. List actively running computer processes
+// command = top
+
+// 12. Clear previous commands from terminal
+// command = clear
+
+// 13. Get help for a command
+// command = help
+// help commandname
+
+// 14. One line description for command
+// command = whatis
+// whatis command
+

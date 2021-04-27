@@ -1,0 +1,16 @@
+//// Install on Mac
+// cd node
+// curl https://raw.githubusercontent.com/algorand/go-algorand-doc/master/downloads/installers/update.sh -O
+// chmod 544 update.sh
+// ./update.sh -i -c stable -p ~/node -d ~/node/data -n
+
+//// Installing the Devtools
+// If algorand has not been previously installed, it will automatically download it.
+// If algorand is installed but older than the devtools, it will automatically upgrade it.
+
+//// Start node
+// sudo systemct1 start algorand
+// ERROR: sudo: systemct1: command not found
+
+// goal node status -d /var/lib/algorand
+// ERROR: -bash: goal: command not found

@@ -1,0 +1,7 @@
+// Node
+// Node up and running through command line
+source activate VIRTUAL_ENV
+cd node
+
+// open file as txt
+open -e 'File_Name'
