@@ -1,0 +1,10 @@
+//Fix
+
+//Error = goal: command not found
+//export PATH="$HOME/node:$PATH"
+
+//Error = could not make cachedir: mkdir /var/lib/algorand/goal.cache: no such file or directory
+//export ALGORAND_DATA="$HOME/node/data"
+
+//goal node start
+//goal node status
