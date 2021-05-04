@@ -5,7 +5,12 @@ receiver_address = "DILZEWFPINKNAIXL4T4Z63SDVJ6DWK3KMK43S2XXJGVVC52M54MP4RMV5A"
 receiver_passphrase = "session comfort ice manual lazy thrive crumble oak tissue quiz region broken giant obtain metal expose burden north core fiber giraffe bird multiply absent quarter"
 
 # Credentials to connect through an algod client
-algod_address = "127.0.0.1:8080"
+
+#Try one from developer docs
+#algod_address = "https://api.host.com"
+#Try two from reciever address in article
+algod_address = "http://localhost:8080"
+
 algod_token = "a115bfe5a9c583b04d63f675ca8e397c0777f334b022d66c86c8702cd7c34534"
 
 # Details of the asset creation transaction
