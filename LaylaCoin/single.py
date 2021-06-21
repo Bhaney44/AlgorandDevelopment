@@ -1,7 +1,24 @@
 # Imports
-import util
-import main
-import config
+from config import *
+from util import sign_and_send, balance_formatter
+
+from algosdk.v2client import algod
+from algosdk import account, mnemonic
+from algosdk.future.transaction import write_to_file
+from algosdk.future.transaction import AssetConfigTxn, AssetTransferTxn
+from algosdk.future.transaction import AssetTransferTxn
+import hashlib
+import base64
+from algosdk import account, mnemonic
+
+# Variables
+creator_address = "TZVTFROZLE6IFGRETS2ULK5JOWOEUMA2LFPYOW2BAFNF27WNMDGQIOJKZM"
+creator_passphrase = "ask lucky match spoon drastic long future muscle farm female soon hill balcony bunker man prefer novel unaware that tomato brief window next absorb license"
+receiver_address = "66PWZ4YF7MT6SRAFESWZ44KA262BLNSH6PTE7CUULPIHMNWYX4ZGPMZJMQ"
+receiver_passphrase = "excite profit arch either banner movie open tool model must step zone wisdom deal innocent truck test rocket angle glare between dismiss spell able local"
+algod_address = "https://testnet.algoexplorerapi.io"
+algod_token = "a115bfe5a9c583b04d63f675ca8e397c0777f334b022d66c86c8702cd7c34534"
+asset_id = 17103284
 
 ## 1. Generate the LaylaCoin Creator and Receiver Accounts
 ## Create New Accounts
