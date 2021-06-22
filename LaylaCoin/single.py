@@ -60,7 +60,7 @@ create(creator_passphrase)
 ## Optin
 # from main import optin
 # from config import receiver_passphrase
-receiver_passphrase = "excite profit arch either banner movie open tool model must step zone wisdom deal innocent truck test rocket angle glare between dismiss spell able local"
+receiver_passphrase = "..."
 def optin(passphrase=None):
 	params = client.suggested_params()
 	txn = AssetTransferTxn(sender=receiver_address, sp=params, receiver=receiver_address, amt=0, index=asset_id)
@@ -74,7 +74,7 @@ optin(receiver_passphrase)
 
 ## 5. Read the LaylaCoin Balance
 ## Balance
-receiver_address = "66PWZ4YF7MT6SRAFESWZ44KA262BLNSH6PTE7CUULPIHMNWYX4ZGPMZJMQ"
+receiver_address = "..."
 asset_id = 17103284
 def check_holdings(asset_id, address):
 	account_info = client.account_info(address)
@@ -89,7 +89,7 @@ check_holdings(asset_id, receiver_address)
 
 ## 6. Transfer LaylaCoin to the Receiver Account
 ## Transfer
-creator_passphrase = "ask lucky match spoon drastic long future muscle farm female soon hill balcony bunker man prefer novel unaware that tomato brief window next absorb license"
+creator_passphrase = "..."
 def transfer(passphrase=None):
     amount = 6000
     params = client.suggested_params()
@@ -106,8 +106,8 @@ transfer(creator_passphrase)
 
 ## Confirm
 from config import creator_address, receiver_address
-creator_address = "TZVTFROZLE6IFGRETS2ULK5JOWOEUMA2LFPYOW2BAFNF27WNMDGQIOJKZM"
-receiver_address = "66PWZ4YF7MT6SRAFESWZ44KA262BLNSH6PTE7CUULPIHMNWYX4ZGPMZJMQ"
+creator_address = "..."
+receiver_address = "..."
 # Checks the asset balance for the specific address and asset id.
 def check_holdings(asset_id, address):
     account_info = client.account_info(address)
