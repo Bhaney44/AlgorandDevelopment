@@ -1,0 +1,54 @@
+    private fun calculateReward(
+        balanceWithoutReward: BigInteger,
+        earnedRewards: Long,
+        onBalanceCalculated: (AlgoBalanceInformation) -> Unit
+    ) {
+        val rewardRate = blockResponse?.block?.rewardRate ?: return
+        val rewardResidue = blockResponse?.block?.rewardResidue ?: return
+        val totalMoney = totalAlgoSupply?.totalMoney ?: return
+        val algoBalanceInformation = algoRewardCalculator
+            .calculateReward(totalMoney, rewardRate, rewardResidue, balanceWithoutReward, earnedRewards)
+        onBalanceCalculated(algoBalanceInformation)
+    }
+
+    class AlgoRewardCalculator @Inject constructor() {
+
+    fun calculateReward(
+        totalMoney: BigInteger,
+        rewardRate: BigInteger,
+        rewardResidue: BigInteger,
+        balanceWithoutRewards: BigInteger,
+        earnedRewards: Long
+    ): AlgoBalanceInformation {
+        if (totalMoney == BigInteger.ZERO) AlgoBalanceInformation.create()
+        val nextRewardAmount = balanceWithoutRewards.toBigDecimal()
+            .divide(ALGO_TO_MICRO_ALGO)
+            .movePointLeft(ALGO_DECIMALS)
+            .setScale(ALGO_DECIMALS, FLOOR)
+        val rewardMultiplier = rewardRate.toBigDecimal().add(rewardResidue.toBigDecimal())
+        val pendingRewardTotalMoneyRatio = totalMoney.toBigDecimal().divide(ALGO_TO_MICRO_ALGO, FLOOR)
+        val pendingReward = nextRewardAmount
+            .setScale(ALGO_DECIMALS, FLOOR)
+            .multiply(rewardMultiplier)
+            .divide(pendingRewardTotalMoneyRatio, FLOOR)
+            .add(earnedRewards.toBigDecimal().movePointLeft(ALGO_DECIMALS))
+        return AlgoBalanceInformation.create(balanceWithoutRewards, pendingReward)
+    }
+
+    companion object {
+        val ALGO_TO_MICRO_ALGO: BigDecimal = BigDecimal.valueOf(1000000)
+    }
+}
+
+data class TotalAlgoSupply(
+    @SerializedName("current_round") val currentRound: BigInteger?,
+    @SerializedName("online-money") val onlineMoney: BigInteger?,
+    @SerializedName("total-money") val totalMoney: BigInteger?
+)
+
+data class Block(
+    @SerializedName("frac") val rewardResidue: BigInteger?,
+    @SerializedName("rate") val rewardRate: BigInteger?
+)
+
+
